@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.header-head {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    align-items: center;
+    position: relative;
+}
+.header-head::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    left: -10px;
+}
+.robot:hover .header-head::after{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 40px 25px 0px 25px ;
+    box-shadow: 2px 2px 20px #000 ;
+}
+.ear {
+    margin-top: 20px;
+    width: 20px;
+    height: 70px;
+    background-color: aquamarine;
+    border-radius: 20px 0px 0px 20px ;
+
+}
+.ear:nth-child(1) {
+    width: 20px;
+    height: 70px;
+    background-color: aquamarine;
+    border-radius: 20px 0px 0px 20px ;
+
+}
+.ear:nth-child(3) {
+    width: 20px;
+    height: 70px;
+    background-color: aquamarine;
+    border-radius: 0px 20px 20px 0px ;
+}
+
+
+.robot {
+    border-radius: 45px;
+    box-shadow: 2px 2px 50px #000000;
+    width: 800px;
+    height: 650px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+
+}
+/* .robot:hover .head{
+    transform: translateY(50px);
+
+} */
+.head {
+    transform-style: preserve-3d;
+    margin-top: 30px;
+    width: 150px;
+    height: 125px;
+    border-radius: 20px;
+    background-color: rgb(0, 85, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    perspective: 30px;
+    transform: translateZ(40px);
+
+}
+.eyes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+}
+.eye {
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 50px 50px 0 0;
+    margin: 0 10px;
+    position: relative;
+}
+.eye::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left:10px;
+    background-color: #000;
+    transition: 0.3s;
+    border-radius: 50%;
+    border-radius: 50%;
+    transform: rotate(45deg);
+
+}
+.eye::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 12px;
+    left:13px;
+    background-color: #ff0000;
+    transition: 0.3s;
+    border-radius: 50%;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    z-index: 2;
+    animation-name: colorChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+
+
+@keyframes colorChange {
+from {
+    background-color: red;
+}
+to {
+    background-color: rgb(0, 0, 0);
+}
+}
+
+
+
+
+
+/* .eye:hover::after{
+    background-color: blue;
+    transform: scale(1.4) rotate(45deg) translateY(2px) translateX(-2PX) ;
+    box-shadow: 2px 2px 2px blue;
+}
+.eye:hover:nth-child(2):after{
+    background-color: rgb(0, 255, 26);
+    transform: scale(1.4) rotate(45deg) translateY(2px) translateX(-1PX) ;
+    box-shadow: 2px 2px 2px greenyellow;
+}
+ */
+
+.nose {
+    height: 30px;
+    width: 10px;
+    border-radius: 20px ;
+    background-color: #fff;
+    transition: 0.5s;
+}
+/* .nose:hover{
+    transform: scale(1.7);
+    background-color: cornflowerblue;
+
+} */
+
+.mouth {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+.mouth{
+    height: 10px;
+
+}
+/* .mouth:hover{
+    transform: rotate(50deg);
+} */
+.body {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    background-color: #ffbf00;
+    border-radius: 20px;
+    transition: 0.5s;
+    z-index: 2;
+}
+/* .body:hover{
+    transform: translateY(50px);
+} */
+.left-hand {
+    width: 50px;
+    height: 150px;
+    margin-left: -24px;
+    transform: rotate(26deg);
+    z-index: 1;
+}
+
+
+
+.right-hand {
+    width: 50px;
+    height: 150px;
+    margin-left: 210px;
+    transform: rotate(-26deg);
+    z-index: 1;
+    margin-top: -20px;
+}
+.hand-1{
+    background-color: aqua;
+    
+}
+.hand-1:nth-child(1){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: -25px;
+}
+.hand-1:nth-child(2){
+    width: 35px;
+    height: 60px;
+    margin-top: -10px;
+    margin-left: -19px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.hand-1:nth-child(3){
+    width: 30px;
+    height: 45px;
+    margin-top: -5px;
+    margin-left: -17.5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.hand-1:nth-child(4){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -7px;
+    margin-left: -27px;
+}
+.hand-1:nth-child(5){
+    width: 80px;
+    height: 70px;
+    border-radius: 20px 20px 5px 5px;
+    margin-top: -5px;
+    margin-left: -40px;
+    /* transform: rotate(90deg); */
+    z-index: 2;
+}
+.hand-1:nth-child(6){
+    width: 50px;
+    height: 50px;
+    border-radius: 30px 30px 0px 0px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    margin-top: -48px;
+    margin-left: -25px;
+    z-index: 1;
+}
+
+
+.hand-2{
+    background-color: aqua;
+}
+.hand-2:nth-child(1){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: -25px;
+}
+.hand-2:nth-child(2){
+    width: 35px;
+    height: 60px;
+    margin-top: -10px;
+    margin-left: -19px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.hand-2:nth-child(3){
+    width: 30px;
+    height: 45px;
+    margin-top: -5px;
+    margin-left: -16.5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.hand-2:nth-child(4){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -7px;
+    margin-left: -27px;
+}
+.hand-2:nth-child(5){
+    width: 80px;
+    height: 70px;
+    border-radius: 20px 20px 5px 5px;
+    margin-top: -5px;
+    margin-left: -40px;
+    /* transform: rotate(90deg); */
+}
+.hand-2:nth-child(6){
+    width: 50px;
+    height: 50px;
+    border-radius: 30px 30px 0px 0px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    margin-top: -48px;
+    margin-left: -25px;
+}
+
+
+
+.legs {
+    display: flex;
+    justify-content: space-around;
+}
+.left-leg {
+    padding: 0px 5px 0px 5px  ;
+}
+.leg-1 {
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background: #00ffea;
+    margin-left: 20px;
+}
+.right-leg {
+    padding: 0px 5px 0px 5px  ;
+}
+.leg-2 {
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background: #00ffea;
+}
+
+
+.leg-1:nth-child(5) {
+    padding: 0px;
+    margin-top: -12px;
+
+    margin-left: -5px;
+    width: 75px;
+    height: 30px;
+    border-radius: 20px 5px 5px 5px;
+    background: #99ff00;
+}
+.leg-2:nth-child(5){
+    padding: 0px;
+    margin-top: -12px;
+    width: 75px;
+    height: 30px;
+    border-radius: 5px 20px 5px 5px;
+    background: #99ff00;
+}
+
+
+
+/* MAIN Animation */
+
+.robot:hover .hand-2:nth-child(2){
+    
+    transform: rotate(-90deg);
+    margin-top: -55px;
+    margin-left:  5px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.robot:hover .hand-2:nth-child(3){
+    transform: rotate(-90deg);
+    margin-top: -53px;
+    margin-left: 60px;
+    border-radius: 0px 0px 5px 5px;
+}
+.robot:hover  .hand-2:nth-child(4){
+    transform: rotate(-90deg);
+    margin-top: -50px;
+    margin-left: 80px;
+}
+.robot:hover  .hand-2:nth-child(5){
+    transform: rotate(-90deg);
+    width: 80px;
+    height: 70px;
+    border-radius: 20px 20px 5px 5px;
+    margin-top: -60px;
+    margin-left: 120px;
+}
+.robot:hover  .hand-2:nth-child(6){
+    transform: rotate(-90deg);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px 30px 0px 0px;
+    border: 1px solid transparent;
+    background-color: #fff;
+    margin-top: -59.5px;
+    margin-left: 147px;
+}
+
+h1{
+    position: absolute;
+    left: 540px;
+    top: 90px;
+    z-index: 2;
+    color:#fff;
+    transition: 0.5s; 
+}
+.robot:hover h1{
+    color:#000
+}
+button{
+    margin: 0px auto;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    box-shadow: 1px 1px 5px #ff0000;
+    border-radius: 20px;
+    color: #fff;
+    margin-left: 75px;
+}
+
+
+.head-top {
+}
+.head-bottom {
+}
+
+.head-back {
+}
